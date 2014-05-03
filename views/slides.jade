@@ -1,0 +1,251 @@
+extend layout
+block content
+  .reveal
+    .slides
+      section
+        h2(style="text-transform:uppercase !important;") My girlfriend is a crypto-anarchist and she doesn't even know it... and my dad, and my...
+        p
+          small
+            a(href='http://github.com/malditogeek') Mauro Pompilio
+        small FUTUREJS - May 2014
+      section
+        h1 Disclaimer
+        blockquote
+          p "Security is a process, not a product."
+          p Bruce Schneier
+      section
+        img.img-circle(src='/images/m.png', width='250px')
+        h2 Mauro Pompilio
+        h3 
+          i @malditogeek
+      section
+        h1
+          a(href="https://gitter.im") gitter.im by day
+        h1 
+          a(href="https://vmux.co") vmux.co by night
+      section
+        img(src='/images/aless.png', width='700px')
+      section
+        img(src='/images/carlos.png', width='700px')
+      section
+        h1 The quest to privacy and effective, easy to use encryption.
+      section
+        blockquote
+          "Crypto-anarchists employ cryptographic software to evade prosecution and harassment while sending and receiving information over computer networks, in an effort to protect their privacy and political freedom."
+        a(href='https://en.wikipedia.org/wiki/Crypto-anarchism') Wikipedia
+      section
+        img(src='/images/snowden.jpg', width='700px')
+      section
+        h1 Summer 
+        h2 of 
+        h1 Surveillance
+      section
+        h2 MUSCULAR
+        h2 TURMOIL
+        h2 TEMPORA
+        h2 PRISM
+        h2 OPTIC NERVE
+        h2 ...
+      section
+        h1 Mass Global Surveillance
+      section
+        img(src='/images/aless.png', width='700px')
+      section
+        img(src='/images/carlos.png', width='700px')
+      section
+        h1 How private is that Facebook Private Message?
+      section
+        h1 How private is that plain-text email on your GMail?
+      section
+        h1 ProTip: They are not.
+      section
+        h1 How private is your videochat?
+      section
+        h2 "Unfortunately … it would appear that a surprising number of people use webcam conversations to show intimate parts of their body to the other person."
+        a(href='http://www.theguardian.com/world/2014/feb/27/gchq-nsa-webcam-images-internet-yahoo') GCHQ - OPTIC NERVE PROGRAM
+      section
+        h1 Problem:
+        h1 Centralized services
+      section
+        h1 Problem:
+        h1 Lack of encryption
+      section
+        h1 Problem:
+        h1 Trust. Closed source cryptography is absurd.
+      section
+        h1 BitMessage
+        h1 PGP
+        h1 OTR
+        h1 TOR hidden service
+      section
+        h1 'pffff... PGP? what?'
+        h1 'can't be asked'
+      section
+        h1 JavaScript
+      section
+        h1 Widely deployed
+        h2 millions of browsers
+      section
+        h1 Diverse Community
+      section
+        h2 WebRTC for P2P and encryption
+        h2 OTR.js for encryption
+        h2 OpenSource for trust
+      section
+        img(src='/images/vmux.png', width='200px', style='margin-bottom: 120px')
+        h2 VMUX is Skype/Hangouts, in the browser.
+        h2 No plugins, no Flash.
+        h2 P2P and secure.
+        h2 Open source
+      section
+        h2 CoffeeScript
+        h2 Express
+        h2 Backbone
+        h2 Browserify
+      section
+        h1 WebRTC
+        blockquote
+          "Web Real-Time Communication (WebRTC) is a collection of standards, protocols, and JavaScript APIs, the combination of which enables peer-to-peer audio, video, and data sharing between browsers."
+      section
+        h2 WebRTC support
+        ul
+          li Chrome
+          li Chrome for Android
+          li Firefox
+          li Firefox Android
+          li Opera
+          li Java and Objective-C bindings
+      section
+        h2 Access to input devices
+        h2 Communicate to a remote peer
+        h2 Send arbitrary data
+      section
+        h1 JavaScript APIs
+      section
+        h1 MediaStream
+        h1 RTCPeerConnection
+        h1 RTCDataChannel
+      section
+        h1 MediaStream
+        p Source of sync'd audio and/or video
+        p constraints for video (resolution, etc)
+      section
+        h1 RTCPeerConnection
+        p Hides A LOT of complexity
+        ul
+          li Signal processing
+          li 
+            | Encoding
+            ul
+              li Audio: Opus
+              li Video: VP8
+          li P2P 
+          li Security
+          li Bandwith Management
+      section
+        pre
+          code
+            | pc = new RTCPeerConnection(null);
+            | pc.onaddstream = gotRemoteStream;
+            | pc.addStream(localStream);
+            | pc.createOffer(gotOffer);
+      section
+        h1 RTCDataChannel
+        ul
+          li Low latency (games, state, etc)
+          li Reliable or Unreliable 
+          li Secure (DTLS)
+          li WebSockets API
+      section
+        h1 Signaling
+        p Reaching a remote peer
+        p SessionDescriptions
+        p Abstract transport XHR/WebSockets/XMPP
+      section
+        img(src='/images/signaling.png').white
+      section
+        p 
+          i But you still need to route traffic from peer to peer
+        p
+          i ...
+        p
+          i and you're probably behind NAT.
+      section
+        h1 STUN / TURN
+        p STUN: 
+          i Session Traversal Utilities for NAT
+        p TURN: 
+          i Traversal Using Relays around NAT
+      section
+        h1 ICE
+        p
+          small
+            i Interactive Connectivity Establishment
+        p Framework for connecting peers
+        p Part of WebRTC
+        p Tries ICE candidates in parallel
+      section
+        img(src='/images/stun.png').white
+      section
+        img(src='/images/STUNandTURN.png').white
+      section
+        img(src='/images/webrtc-complete-diagram.png').white
+      section
+        h1 Securing the connection
+        p Media: SRTP
+        p Data: DTLS
+        p (Make sure you use HTTPS/TLS for signaling)
+        p VMUX uses OTR for authentication
+      section
+        h1 Libraries
+        h2 PeerJS
+        p 
+          a(href='https://github.com/peers/peerjs') https://github.com/peers/peerjs
+        h2 SimpleWebRTC
+        p 
+          a(href='https://github.com/henrikjoreteg/SimpleWebRTC') https://github.com/henrikjoreteg/SimpleWebRTC
+        h2 apprtc
+        p
+          a(href='https://apprtc.appspot.com') https://apprtc.appspot.com
+        h2 adapter.js polyfill
+        p 
+          a(href='https://apprtc.appspot.com/js/adapter.js') https://apprtc.appspot.com/js/adapter.js
+      section
+        h2 Public STUN server
+        p stun.l.google.com:19302
+      section
+        h2 sharefest.me
+        a(href='https://github.com/Peer5/ShareFest') https://github.com/Peer5/ShareFest
+        h2 sharedrop.io
+        a(href='https://github.com/cowbell/sharedrop') https://github.com/cowbell/sharedrop
+        h2 webtorrent
+        a(href='https://github.com/feross/webtorrent') https://github.com/feross/webtorrent
+        h2 easyrtc
+        a(href='https://github.com/priologic/easyrtc') https://github.com/priologic/easyrtc
+      section
+        h2 Readings
+        p
+          a(href='http://www.html5rocks.com/en/tutorials/webrtc/basics/') HTML5 Rocks WebRTC basics
+        p
+          a(href='http://chimera.labs.oreilly.com/books/1230000000545/ch18.html') High Performance Browser Networking, Chapter 18
+        p
+          a(href='http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/') Signaling
+        p
+          a(href='http://bloggeek.me/send-file-webrtc-data-api/') File transfers over RTC
+      section
+        h2 chrome://webrtc-internals
+        a(href='https://groups.google.com/forum/#!forum/discuss-webrtc') discuss-webrtc Google Group
+      section
+        blockquote
+          "Legal and illegal are not the same as right and wrong. Do what is right and never give up the fight. This is one idea out of many that can help you and your friends free our planet from the tyranny that surrounds us all. It's up to you know, go create something beautiful and help others to do the same." 
+        p
+          a(href='http://mostlysignssomeportents.tumblr.com/post/80630741454/jake-appelbaum-reads-his-homeland-afterword-with') Jacob Appelbaum  
+          |  - Tor Project
+      section
+        h1 Happy Hacking!
+        p @malditogeek
+        p 
+          a(href='https://github.com/malditogeek/vmux') https://github.com/malditogeek/vmux
+        p 
+          a(href='https://gitter.im/malditogeek/vmux') https://gitter.im/malditogeek/vmux
+
