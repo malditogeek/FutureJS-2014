@@ -12,9 +12,10 @@ block content
         h1 Disclaimer
         blockquote
           p "Security is a process, not a product."
-          p Bruce Schneier
+        p
+          a(href='https://www.schneier.com/essay-062.html') Bruce Schneier
       section
-        img.img-circle(src='/images/m.png', width='250px')
+        img.img-circle(src='/images/mauro.png', width='250px')
         h2 Mauro Pompilio
         h3 
           i @malditogeek
@@ -65,13 +66,14 @@ block content
         a(href='http://www.theguardian.com/world/2014/feb/27/gchq-nsa-webcam-images-internet-yahoo') GCHQ - OPTIC NERVE PROGRAM
       section
         h1 Problem:
-        h1 Centralized services
+        h2 Centralized services
       section
         h1 Problem:
-        h1 Lack of encryption
+        h2 Lack of encryption
       section
         h1 Problem:
-        h1 Trust. Closed source cryptography is absurd.
+        h2 Trust. 
+        p Closed source cryptography is absurd.
       section
         h1 BitMessage
         h1 PGP
@@ -102,6 +104,9 @@ block content
         h2 Express
         h2 Backbone
         h2 Browserify
+      section
+        h2 Sandbox your JS apps
+        h2 crypto.cat
       section
         h1 WebRTC
         blockquote
@@ -142,13 +147,6 @@ block content
           li P2P 
           li Security
           li Bandwith Management
-      section
-        pre
-          code
-            | pc = new RTCPeerConnection(null);
-            | pc.onaddstream = gotRemoteStream;
-            | pc.addStream(localStream);
-            | pc.createOffer(gotOffer);
       section
         h1 RTCDataChannel
         ul
@@ -237,7 +235,7 @@ block content
         a(href='https://groups.google.com/forum/#!forum/discuss-webrtc') discuss-webrtc Google Group
       section
         blockquote
-          "Legal and illegal are not the same as right and wrong. Do what is right and never give up the fight. This is one idea out of many that can help you and your friends free our planet from the tyranny that surrounds us all. It's up to you know, go create something beautiful and help others to do the same." 
+          "Legal and illegal are not the same as right and wrong. Do what is right and never give up the fight. This is one idea out of many that can help you and your friends free our planet from the tyranny that surrounds us all. It's up to you now, go create something beautiful and help others to do the same." 
         p
           a(href='http://mostlysignssomeportents.tumblr.com/post/80630741454/jake-appelbaum-reads-his-homeland-afterword-with') Jacob Appelbaum  
           |  - Tor Project
