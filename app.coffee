@@ -11,5 +11,5 @@ app.get '/', (req, res) ->
   res.render 'slides'
 
 port = process.env.PORT || 5000
-console.log "Ready! http://localhost:#{port}"
+console.log "+ Slides available at http://localhost:#{port}"
 app.listen(port)
